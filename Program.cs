@@ -67,3 +67,26 @@ int oddNumber = 0;
       if (i % 2 == 0) oddNumber += myRandomArray[i];
     }
     Console.WriteLine($"сумма элементов на нечетных позициях, с учетом того что позиции нумеруются с 0: {oddNumber}");
+
+//задача 38
+Console.WriteLine(" ");
+Console.WriteLine("Задача 38");
+Console.WriteLine("Введите количество элементов в массиве");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число случайно генерируемого диапазона");
+int min2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите последнее число случайно генерируемого диапазона");
+int max2 = Convert.ToInt32(Console.ReadLine());
+
+int[] myRandomArray2 = CreateRandomArray(num2, min2, max2);
+Console.WriteLine("Массив:");
+    ShowArray(myRandomArray2);
+    int maxNumber = min2; 
+    int minNumber = max2; 
+      for (int i = 0; i < myRandomArray.Length; i++)
+    {
+      if (maxNumber < myRandomArray2[i]) maxNumber = myRandomArray2[i];
+      if (minNumber > myRandomArray2[i]) minNumber = myRandomArray2[i];
+    }
+    int difference = maxNumber - minNumber;
+    Console.WriteLine($"Разница между максимальным и минимальным элементами = {difference}");
