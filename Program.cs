@@ -32,3 +32,16 @@ Console.Write(array[i] + " ");
 }
 Console.WriteLine();
 }
+
+//задача 34
+Console.WriteLine("введите количество элементов в массиве:");
+int num = Convert.ToInt32(Console.ReadLine());
+int[] myArray = CreateRandomArray(num, 100, 1000);
+ShowArray(myArray);
+ 
+    int even = 0;
+    for (int i = 0; i < myArray.Length; i++)
+    {
+      if (myArray[i] % 2 == 0) even += 1;
+    }
+    Console.WriteLine($"количество четных элементов: {even}");
